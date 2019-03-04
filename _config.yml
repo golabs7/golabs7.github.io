@@ -3,10 +3,10 @@ email: golabs.corp@google.com
 description: |
   GoLabs 기술블로그 입니다.
 baseurl: ''
-url: 'http://tech.inswave.com'
+url: 'http://golabs7.github.io'
 timezone: Asia/Seoul
 
-repository: inswave/inswave.github.io
+repository: golabs7/golabs7.github.io
 
 permalink: /:year/:month/:day/:title/
 
@@ -44,18 +44,18 @@ defaults:
     values:
       layout: tag
 
-exclude: [README.md, Gemfile, Gemfile.lock]
+exclude: [README.md, Gemfile, Gemfile.lock, ref]
 
 keep_files: [assets, files]
 github: [metadata]
 
-author: webmaster@inswave.com
+author: golabs.corp@google.com
 image: '/assets/images/default_blog_cover.png'
 asset_url: /assets
-google_analytics:
-  ua: 'UA-1212521-13'
-facebook:
-  app_id: '1204347326263800'
-  username: inswave
+#google_analytics:
+#  ua: 'UA-1212521-13'
+#facebook:
+#  app_id: '1204347326263800'
+#  username: inswave
 github_url:
-  username: inswave
+  username: golabs7
