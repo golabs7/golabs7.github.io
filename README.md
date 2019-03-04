@@ -1,4 +1,4 @@
-tech.inswave.com
+golabs7.github.io
 ==============
 
 > 주의: [GitHub Pages]와 [Jekyll]에 대해서 충분히 숙지할 것.
@@ -7,20 +7,20 @@ tech.inswave.com
 
 ### 설치
 
-<https://github.com/inswave/inswave.github.io> 에 push 권한이 있다면:
+<https://github.com/golabs7/golabs7.github.io> 에 push 권한이 있다면:
 
 1. git fetch or pull or clone
 2. [Jekyll] 설치
 
 ```console
-$ git clone git@github.com/inswave/inswave.github.io.git
-$ cd inswave.github.io
+$ git clone git@github.com/golabs7/golabs7.github.io.git
+$ cd golabs7.github.io
 $ bundle install
 ```
 
-<https://github.com/inswave/inswave.github.io> 에 push 권한이 없다면:
+<https://github.com/golabs7/golabs7.github.io> 에 push 권한이 없다면:
 
-1. <https://github.com/inswave/inswave.github.io> 에서 `Fork` 버튼 클릭하고,
+1. <https://github.com/golabs7/golabs7.github.io> 에서 `Fork` 버튼 클릭하고,
 2. 포크 저장소 계정(maybe 개인 계정) 선택
 3. git fetch or pull or clone
 4. 포크 설정 [Configuring a remote for a fork](https://help.github.com/articles/configuring-a-remote-for-a-fork/)
@@ -28,9 +28,9 @@ $ bundle install
 6. [Jekyll] 설치
 
 ```console
-$ git clone git@github.com:YOUR_GITHUB_ACCOUNT/inswave.github.io.git
-$ cd inswave.github.io
-$ git remote add upstream git@github.com:inswave/inswave.github.io.git
+$ git clone git@github.com:YOUR_GITHUB_ACCOUNT/golabs7.github.io.git
+$ cd golabs7.github.io
+$ git remote add upstream git@github.com:golabs7/golabs7.github.io.git
 $ git fetch upstream
 $ git checkout master
 $ git merge upstream/master
@@ -46,14 +46,14 @@ $ open http://localhost:4000
 
 ### 배포(발행)
 
-<https://github.com/inswave/inswave.github.io> 에 push 권한이 있다면:
+<https://github.com/golabs7/golabs7.github.io> 에 push 권한이 있다면:
 
 ```
 $ git commit -m '...'
 $ git push origin master
 ````
 
-<https://github.com/inswave/inswave.github.io> 에 push 권한이 없다면:
+<https://github.com/golabs7/golabs7.github.io> 에 push 권한이 없다면:
 
 1. Fork 동기화 [Syncing a fork](https://help.github.com/articles/syncing-a-fork/)
 2. Pull Request 보내기 [Creating a pull request](https://help.github.com/articles/creating-a-pull-request/)
@@ -73,7 +73,7 @@ $ bundle exec jekyll serve --drafts
 1. `_posts` 디렉토리에 `yyyy-mm-dd-slug.md` 파일로 복사(or 이동).
  - slug: 해당 포스트의 고유 키로 url의 일부로 사용. 왠만하면 특수문자없이 영문자,숫자,-(하이픈),.(점)...만 사용.
  - yyyy,mm,dd: 발행 년,월,일.
- - 참고: 최종적으로 포스트의 url(permalink)는 http://tech.inswave.com/yyyy/mm/dd/slug/
+ - 참고: 최종적으로 포스트의 url(permalink)는 http://tech.golabs7.com/yyyy/mm/dd/slug/
 2. 파일 상단에 [front matter] 작성
  - layout: post # 레이아웃(필수). `page` 레이아웃을 사용하면 목록에 보이지 않는 글을 쓸 수 있음.
  - title: '제목' # 제목(필수)
@@ -87,7 +87,7 @@ $ bundle exec jekyll serve --drafts
 ### 필자 등록
 
 1. `_authors` 디렉토리에 `lastname.firstname.md` 이름으로 필자 정보 파일 추가
- - 참고: 최종적으로 사용자 포스트 목록 페이지의 url은 http://tech.inswave.com/authors/lastname.firstname/
+ - 참고: 최종적으로 사용자 포스트 목록 페이지의 url은 http://tech.golabs7.com/authors/lastname.firstname/
 2. 파일 상단에 [front matter] 작성
  - layout: author # 레이아웃(필수)
  - name: `lastname.firstname` # post의 author와 매칭(필수). 왠만하면 회사 아이디(예: iolo.fitzowen) 사용. 왠만하면 특수문자없이 영소문자,숫자,-(하이픈),.(점)...만 사용.
@@ -99,7 +99,7 @@ $ bundle exec jekyll serve --drafts
 ### 태그 등록
 
 1. `_tags` 디렉토리에 `tag-name.md` 이름으로 필자 정보 파일 추가
- - 참고: 최종적으로 사용자 포스트 목록 페이지의 url은 http://tech.inswave.com/tags/tag-name/
+ - 참고: 최종적으로 사용자 포스트 목록 페이지의 url은 http://tech.golabs7.com/tags/tag-name/
 2. 파일 상단에 [front matter] 작성
  - layout: tag # 레이아웃(필수)
  - name: `tag-name` # post의 tags 배열의 항목과 매칭(필수). 왠만하면 특수문자없이 영소문자,숫자,-(하이픈),.(점)...만 사용.
@@ -109,7 +109,7 @@ $ bundle exec jekyll serve --drafts
 
 ---
 
-문의: <webmaster@inswave.com>
+문의: <golabs.corp@google.com>
 
 May the **SOURCE** be with you...
 
