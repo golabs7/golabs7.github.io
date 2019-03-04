@@ -1,8 +1,7 @@
-title: inswave 기술 블로그
-email: webmaster@inswave.com
+title: GoLabs 기술 블로그
+email: golabs.corp@google.com
 description: |
-  웹을 넘어 새로운 비즈니스 가치의 창출
-  Beyond Web Technology, Create New Business Value
+  GoLabs 기술블로그 입니다.
 baseurl: ''
 url: 'http://tech.inswave.com'
 timezone: Asia/Seoul
