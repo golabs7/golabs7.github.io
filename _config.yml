@@ -1,12 +1,14 @@
-title: GoLabs 기술 블로그
+﻿title: GoLabs 기술 블로그
 email: golabs.corp@google.com
 description: |
-  GoLabs 기술블로그 입니다.
+  새로운 기술, 인공지능!!
 baseurl: ''
 url: 'http://golabs7.github.io'
 timezone: Asia/Seoul
 
 repository: golabs7/golabs7.github.io
+
+future : true
 
 permalink: /:year/:month/:day/:title/
 
