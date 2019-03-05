@@ -3,10 +3,10 @@ layout: post
 title: 'jekyll를 이용한 GoLabs 기술 블로그 설치'
 author: jason.yu
 date: 2019-03-05 15:30
-tags: [jekyll]
+tags: [jekyll,markdown]
 ---
 
-본 포스팅에서는 Windows 환경과 Linux(Centos 7) 환경에서 Jekyll 설치와 Github Pages를 이용한 무료 호스팅 방법, 로컬 구동법을 알아봅니다.
+본 포스팅에서는 Windows 환경과 Linux(Centos 7) 환경에서 Jekyll 설치와 Github Pages를 이용한 무료 호스팅 방법, 로컬 구동법을 알아보고, 블로그 문서 작성을 위한 간단한 Markdown 문법을 알아봅니다.
 
 Jekyll(지킬) 이란?
 -----------
@@ -14,7 +14,7 @@ Jekyll은 정적 웹 페이지 생성기입니다. 사용자가 웹 페이지의
 
 Windows 설치방법
 ----------
-1. Repository Clone<br>
+- Clone Repository<br>
 적당한 경로에 GoLabs 기술 블로그 Repository를 Clone하고 해당 경로로 이동합니다.
 
 ```
@@ -26,12 +26,15 @@ cd golabs7.github.io.git
 
 ```
 
-2. Ruby(루비) 설치<br>
+- Ruby(루비) 설치<br>
 gem 명령을 이용하여 jekyll을 설치하기 위해 Ruby를 설치해줍니다.
 아래 링크로 접속하여 DEVKIT(개발자도구)가 포함 된 2.5.x 이상 버전의 Ruby를 다운로드하여 설치합니다.<br>
-[링크](https://rubyinstaller.org/downloads/)
+[----링크----](https://rubyinstaller.org/downloads/)<br>
+설치 패키지를 종료하기 전 화면에서 Dev Chain을 설치하겠냐는 물음에 체크하여 Dev Chain 또한 설치해줍니다.<br>
+잠시 후 나타나는 cmd창에서 3을 입력하여 설치를 진행합니다.<br>
+설치가 끝나면 cmd 창을 닫습니다.
 
-3. Jekyll 설치<br>
+- Jekyll 설치<br>
 gem 명령어를 통해 Jekyll과 실행에 필요한 패키지를 설치합니다.
 
 ```
@@ -43,268 +46,76 @@ gem install bundler
 
 ... 생략 ...
 
-```
-
-
-
-Github Page 설정하기
-============
-Github Page를 이용하여 USERNAME.github.io 도메인을 정적 페이지로 호스팅(Hosting) 할 수 있다.
-
-Repository 생성
----------------
-* 이름은 inswave.github.io 입력
-* public 선택
-
-Clone Repository
------------------
-```
-$ git clone https://github.com/username/username.github.io
-```
-
-블로그 프레임워크 선택
-==============
-Githuyb page를 블로그로 만드는데 Jekyll과 Hexo가 일반적으로 사용된다. Hexo는 JavaScript기반에 기본 테마 디자인이 미려하여 사용하는 사람이 많지만 Git으로 블로그 포스트 버전관리가 어렵다는 치명적인 단점이 있어서 Jekyll을 선택하였다.
-
-Jekyll은 가장 많은 사용자를 보유하고 있으며 Github Page에서 직접 지원하고 있어서 설정이 쉽다는 장점이 있다. 단점으로는 Ruby기반으로 속도가 느리고 오류가 발생하는 경우 Ruby를 알아야 할 수 있다.
-
-jekyll 사이트에 다음과 같이 설명하고 있다.
-
-> Jekyll 은 아주 심플하고 블로그 지향적인 정적 사이트 생성기입니다. Jekyll 은 다양한 포맷의 원본 텍스트 파일을 템플릿 디렉토리로부터 읽어서, (Markdown 등의) 변환기와 Liquid 렌더러를 통해 가공하여, 당신이 즐겨 사용하는 웹 서버에 곧바로 게시할 수 있는, 완성된 정적 웹사이트를 만들어냅니다. 그리고 Jekyll 은 GitHub Pages 의 내부 엔진이기도 합니다. 다시 말해, Jekyll 을 사용하면 자신의 프로젝트 페이지나 블로그, 웹사이트를 무료로 GitHub 에 호스팅 할 수 있다는 뜻입니다.
-
-블로그 구성
-=======
-
-먼저 github 기본 테마 중 [slate](https://pages-themes.github.io/slate/)를 선택하여 download 하고 Apache2 라이선스로 공개되어 있는 [kakao 기술 블로그 소스](https://github.com/kakao/kakao.github.io)를 참고하여 구성했다.
-
-```yml
-title: inswave 기술 블로그
-email: webmaster@inswave.com
-description: |
-  웹을 넘어 새로운 비즈니스 가치의 창출
-baseurl: ''
-url: 'http://tech.inswave.com'
-timezone: Asia/Seoul
-
-repository: inswave/inswave.github.io
-
-permalink: /:year/:month/:day/:title/
-
-excerpt_separator: <!--more-->
-
-markdown: kramdown
-
-krandown:
-  input: GFM
-  highlighter: rouge
-
-plugins:
-  - jekyll-paginate
-
-paginate: 5
-paginate_path: '/page/:num/'
-
-collections:
-  authors:
-    output: true
-    permalink: /authors/:path/
-  tags:
-    output: true
-    permalink: /tags/:path/
-
-defaults:
-  - scope:
-      path: ''
-      type: authors
-    values:
-      layout: author
-  - scope:
-      path: ''
-      type: tags
-    values:
-      layout: tag
-
-exclude: [README.md, Gemfile, Gemfile.lock]
-
-keep_files: [assets, files]
-github: [metadata]
-
-author: webmaster@inswave.com
-image: '/assets/images/default_blog_cover.png'
-asset_url: /assets
-google_analytics:
-  ua: 'UA-1212521-13'
-facebook:
-  app_id: '1204347326263800'
-  username: inswave
-github_url:
-  username: inswave
-```
-
-폴더 및 파일 구성
--------
-### 폴더
-* _layout : 화면 layout을 구성하는데 사용되는 template 파일 저장 폴더. markdown 파일에 layout을 지정하면 _layout 폴더를 검색하여 일치하는 파일로 화면을 생성한다.
-
-	```
-	---
-	layout: post
-	title: 'jekyll를 이용한 기술 블로그 설치'
-	author: kimwooglae
-	date: 2018-02-13 14:11
-	tags: [jekyll]
-	---
-	```
-* _includes : layout 파일에서 참조하는 파일이 저장된 폴더. header, footer 등을 구성하는데 사용된다.
-* _plugin : 사용자 정의 플러그인 폴더
-* assets : css, image, js 등 정적 리소스 저장 폴더
-* files : blog를 작성하면서 필요한 파일 저장 폴더
-* _authors : 작성자 정보 저장 폴더
-
-	```
-	---
-	name: kimwooglae
-	title: 김욱래
-	image: /files/authors/kimwooglae.jpg
-	---
-
-	```
-* _tags : tag 정보 저장 폴더
-
-	```
-	---
-	name: kimwooglae
-	title: 김욱래
-	image: /files/authors/kimwooglae.jpg
-	---
-
-	```
-* _posts : 블로그 글 저장 폴더. 블로그 글은 yyyy-mm-dd-slug.md 파일로 저장.
-	* slug: 해당 포스트의 고유 키로 url의 일부로 사용. 특수문자없이 영문자,숫자,-(하이픈),.(점)...만 사용.
-	* 최종적으로 포스트의 url(permalink)는 http://tech.inswave.com/yyyy/mm/dd/slug/
-	* 이 블로그 글의 URL은 http://tech.inswave.com/2018/02/13/setup/
-* _site : jekyll이 생성한 파일이 저장되는 폴더로 수정하면 안됨
-
-### 파일
-
-* _config.yml : jekyll 환경 설정 파일
-* Gemfile : ruby 구성 파일
-* README.md : 글 작성 방법 등 설명
-* about.md, authors.md, tags.md : about, authors, tags 페이지
-* index.html : 초기 페이지
-* sitemap.xml, sitemap.xsl : sitemap 생성 모듈 (크롤러를 위한 사이트 맵 생성 페이지)
-* rss.xml : rss 생성 파일
-* search2.json : 블로그 검색을 위한 파일
-
-설치가 완료된 후 폴더 구성은 아래와 같다.
-
-```bash
-drwxr-xr-x  10 wlkim  staff    320  2 13 16:40 _includes
-drwxr-xr-x@  8 wlkim  staff    256  2 13 17:02 _layouts
-drwxr-xr-x   3 wlkim  staff     96  2 13 14:14 _plugins
-drwxr-xr-x  19 wlkim  staff    608  2 13 17:45 _site
-drwxr-xr-x   3 wlkim  staff     96  2 13 17:02 _authors
-drwxr-xr-x   4 wlkim  staff    128  2 14 09:08 _posts
-drwxr-xr-x   3 wlkim  staff     96  2 13 14:15 _tags
-drwxr-xr-x@  8 wlkim  staff    256  2 13 16:50 assets
-drwxr-xr-x   4 wlkim  staff    128  2 13 17:03 files
--rw-r--r--   1 wlkim  staff   1105  2 13 17:58 _config.yml
--rw-r--r--@  1 wlkim  staff     73  2 13 13:41 Gemfile
--rw-r--r--   1 wlkim  staff   6488  2 13 13:39 Gemfile.lock
--rw-r--r--   1 wlkim  staff  11358  2 13 11:47 LICENSE.txt
--rw-r--r--   1 wlkim  staff    148  2 13 16:10 404.html
--rw-r--r--   1 wlkim  staff     16  2 14 09:06 CNAME
--rw-r--r--   1 wlkim  staff   5464  2 13 11:51 README.md
--rw-r--r--   1 wlkim  staff    262  2 13 11:47 about.md
--rw-r--r--   1 wlkim  staff    196  2 13 11:47 authors.md
--rw-r--r--@  1 wlkim  staff    164  2 13 11:47 index.html
--rw-r--r--   1 wlkim  staff   1259  2 13 11:47 rss.xml
--rw-r--r--   1 wlkim  staff    821  2 13 11:47 search2.json
--rw-r--r--   1 wlkim  staff   1462  2 13 11:47 sitemap.xml
--rw-r--r--   1 wlkim  staff   3673  2 13 11:47 sitemap.xsl
--rw-r--r--   1 wlkim  staff    175  2 13 11:47 tags.md
-```
-로컬 Preview 작업 환경 구성
-==============
-
-Gemfile 파일 수정
-
-```ruby
-source 'https://rubygems.org'
-gem 'github-pages', group: :jekyll_plugins
-```
-
-bundler 파일 설치
-
-```bash
-$ sudo gem install bundler
-```
-
-Jekyll 설치 (go lang이 설치된 경우 go에서 설치한 bundle이 path에 등록되어 있을 수 있으므로 full path로 실행한다.)
-
-```bash
-$ cd inswave.github.io
-$ /usr/local/bin/bundle install
-Fetching gem metadata from https://rubygems.org/...........
-Fetching gem metadata from https://rubygems.org/.
-Resolving dependencies...
-Using concurrent-ruby 1.0.5
-Using i18n 0.9.4
-Fetching minitest 5.11.3
-Installing minitest 5.11.3
+bundler install (5분정도 걸립니다.)
 
 ... 생략 ...
 
-Using terminal-table 1.8.0
-Fetching github-pages 177
-Installing github-pages 177
-Bundle complete! 1 Gemfile dependency, 81 gems now installed.
-Use `bundle info [gemname]` to see where a bundled gem is installed.
-Post-install message from html-pipeline:
--------------------------------------------------
-Thank you for installing html-pipeline!
-You must bundle Filter gem dependencies.
-See html-pipeline README.md for more details.
-https://github.com/jch/html-pipeline#dependencies
--------------------------------------------------
+
 ```
 
-실행
+- Jekyll 로컬 서버 구동
 
-```bash
-$ /usr/local/bin/bundle exec jekyll serve
-Configuration file: /Users/user/Documents/GIT/inswave.github.io/_config.yml
-            Source: /Users/user/Documents/GIT/inswave.github.io
-       Destination: /Users/user/Documents/GIT/inswave.github.io/_site
- Incremental build: disabled. Enable with --incremental
-      Generating...
-                    done in 0.188 seconds.
- Auto-regeneration: enabled for '/Users/user/Documents/GIT/inswave.github.io'
-    Server address: http://127.0.0.1:4000/
-  Server running... press ctrl-c to stop.
+```
+
+bundle exec jekyll serve
+
+```
+
+Windows에서 Jekyll 구동 시 인코딩 에러가 발생 할 수 있습니다.<br> 
+에러 발생 시 콘솔창에 chcp 65001 입력 후 명령을 실행합니다.<br><br>
+
+```
+chcp 65001
+bundle exec jekyll serve
+
+```
+
+웹 브라우저 주소창에 localhost:4000을 입력하여 서버에 접속합니다.
+
+Linux 설치방법
+----------
+
+Linux 환경에서 설치하는 방법은 매우 간단합니다. <br>
+
+- Clone Repository<br>
+적당한 경로에 GoLabs 기술 블로그 Repository를 Clone하고 해당 경로로 이동합니다.
+
+```
+git clone https://github.com/golabs7/golabs7.github.io.git
+
+... 생략 ...
+
+cd golabs7.github.io.git
 ```
 
 
+- 의존관계에 해당하는 요구조건 충족 확인
 
-접속 주소
-========
-* 로컬 : http://127.0.0.1:4000/
-* 서버 : http://tech.inswave.com
-
-글 작성 방법
-=========
-상세한 내용은 [링크](https://github.com/inswave/inswave.github.io/blob/master/README.md) 참고
-
-새 글 작성
---------
-
-1. `_drafts` 디렉토리에 `적당한이름.md` 이름으로 파일을 만들고
-2. 포스트를 마크다운으로 작성
-  - [gfm] 문법, [kramdown] 파서, [rouge] 문법강조기 사용
-3. 확인
 ```
-$ bundle exec jekyll serve --drafts
+sudo yum install ruby ruby-dev build-essential
 ```
+
+위 명령은 Jekyll 구동에 필요한 Ruby 요소들을 자동으로 확인하고 설치해줍니다.
+
+- Jekyll 설치
+
+```
+gem install jekyll bundler
+```
+
+- Jekyll 로컬 서버 구동
+
+```
+
+jekyll serve
+
+```
+
+웹 브라우저 주소창에 localhost:4000을 입력하여 서버에 접속합니다.
+
+
+블로그 내용 작성 방법
+============
 
 글 쓰기
 -----
