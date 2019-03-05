@@ -1,4 +1,4 @@
 ---
-name: jekyll
-title: jekyll
+name: Jekyll
+title: Jekyll
 ---

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'jekyll를 이용한 GoLabs 기술 블로그 설치'
+title: 'Jekyll를 이용한 GoLabs 기술 블로그 설치'
 author: jason.yu
 date: 2019-03-05 15:30
-tags: [jekyll,markdown]
+tags: [Jekyll,Markdown]
 ---
 
 본 포스팅에서는 Windows 환경과 Linux(Centos 7) 환경에서 Jekyll 설치와 Github Pages를 이용한 무료 호스팅 방법, 로컬 구동법을 알아보고, 블로그 문서 작성을 위한 간단한 Markdown 문법을 알아봅니다.
@@ -27,7 +27,7 @@ cd golabs7.github.io.git
 ```
 
 - Ruby(루비) 설치<br>
-gem 명령을 이용하여 jekyll을 설치하기 위해 Ruby를 설치해줍니다.
+gem 명령을 이용하여 Jekyll을 설치하기 위해 Ruby를 설치해줍니다.
 아래 링크로 접속하여 DEVKIT(개발자도구)가 포함 된 2.5.x 이상 버전의 Ruby를 다운로드하여 설치합니다.<br>
 [----링크----](https://rubyinstaller.org/downloads/)<br>
 설치 패키지를 종료하기 전 화면에서 Dev Chain을 설치하겠냐는 물음에 체크하여 Dev Chain 또한 설치해줍니다.<br>
