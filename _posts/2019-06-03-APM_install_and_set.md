@@ -180,9 +180,9 @@ $ yum install -y policycoreutils-python
 
 - 포트 확인
 ```
-$ semanage port -l | grep mysqld_port_t
+$ semanage port -l \| grep mysqld_port_t
 
-$ semanage port -l | grep http_port_t
+$ semanage port -l \| grep http_port_t
 
 ```
 
@@ -193,7 +193,7 @@ $ semanage port -a -t mysqld_port_t -p tcp 3307
 ```
 - 확인
 ```
-$ semanage port -l | grep mysqld_port_t
+$ semanage port -l \| grep mysqld_port_t
 
 mysqld_port_t tcp 3307, 1186, 3306, 63132-63164
 ```
