@@ -6,9 +6,9 @@ date: 2019-06-03 15:00
 tags: [linux,c++]
 ---
 
-Visual 2017의 강력한 IDE 기능을 이용한 linux 프로그래밍하기
+Visual Studio 2017 의 강력한 IDE 기능을 이용한 linux 프로그래밍하기
 
-가상OS 리눅스 CentOS 7
+가상OS ( 리눅스 CentOS 7 ) 설치
 -----------
 
 - Windows 10 pro Hyper-V 설치<br>
@@ -29,7 +29,6 @@ Hyper-V 설치 가능여부 확인
 
 # systemctl start sshd.service
 ``` 
-
 2. 방화벽 설정
 ```
 # firewall-cmd --zone=public --add-port=22/tcp --permanent
