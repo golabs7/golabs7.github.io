@@ -3,7 +3,7 @@ layout: post
 title: 'VS 2017 linux 프로그래밍 1'
 author: jack.jeong
 date: 2019-06-03 15:00
-tags: [linux,c++]
+tags: [Linux,CentOS,c,c++]
 ---
 
 Visual Studio 2017 의 강력한 IDE 기능을 이용한 linux 프로그래밍하기
