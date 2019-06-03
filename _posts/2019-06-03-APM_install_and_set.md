@@ -58,7 +58,7 @@ $ yum -y install epel-release yum-utils
 ```
 
 
-- Step 2: Disable repo for PHP 5.4</br>
+- Step 2: Disable repo for PHP 5.4<br>
 기본적으로 PHP 5.4 레포지토리가 활성화 되어있습니다. 이것을 7.3으로 바꿉니다.
 ```
 $ yum-config-manager --disable remi-php54
@@ -66,7 +66,7 @@ $ yum-config-manager --enable remi-php73
 ```
 
 
-- PHP 7.3 install</br>
+- PHP 7.3 install<br>
 PHP 7.3과 Extenstion을 설치합니다.
 
 ```
@@ -168,7 +168,7 @@ root 계정 비밀번호 설정 후 몇가지 물음에 엔터를 입력하면 �
 Apache, MariaDB Port 설정
 ----------
 
-- SELinux 설정 확인 </br>
+- SELinux 설정 확인 <br>
 semanage 명령어를 사용해서 확인하고 변경할 수 있다.
 명령어 실행이 안될 경우 policycoreutils-python 패키지를 설치해주면 된다.
 
