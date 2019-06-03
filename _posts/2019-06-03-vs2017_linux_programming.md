@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Visual 2017의 강력한 IDE 기능을 이용한 linux 프로그래밍하기'
+title: 'Visual 2017 linux 프로그래밍'
 author: jack.jeong
 date: 2019-06-03 15:00
 tags: [linux,c++]
