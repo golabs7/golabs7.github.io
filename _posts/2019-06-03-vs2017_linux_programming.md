@@ -18,7 +18,6 @@ Hyper-V 설치 가능여부 확인
 - CentOS7 설치<br>
 1. Hyper-V 관리자에서 가상컴퓨터 새로 만들기<br>
 1세대 또는 2세대 만들기 후 보안 > 보안부팅사용체크해제
-
 ```
 # yum install openssh-server g++ gdb gdbserver zip unzip gcc gcc-c++
 # systemctl restart network
@@ -32,7 +31,6 @@ Hyper-V 설치 가능여부 확인
 ``` 
 
 2. 방화벽 설정
-
 ```
 # firewall-cmd --zone=public --add-port=22/tcp --permanent
 # firewall-cmd --reload
@@ -45,16 +43,12 @@ Hyper-V 설치 가능여부 확인
 Hyper-V 관리자 > 가상스위치 관리자 > 새 가상 네트워크 스위치 > 내부
 2. Host OS의 제어판 > 네트워크 및 인터넷 > 네트워크 및 공유센터 > 1. 에서 만든 가상 스위치 선택 >
 인터넷 프로코콜 버전 4(TCP/IP V4) > 속성
-
 ```
 ip 주소 192.168.120.1
 서브넷마스크 255.255.255.0
 ```
-
 3. 네트워크 및 공유센터 > 이더넷 > 속성 > 공유 > 인터넷 연결공유 체크 및 1. 에서 만든 가상스위치 선택
-
 4. CentOS 7 설정
-
 ``` 
 # vi /etc/sysconfig/network-scripts/ifcfg-eth0
 BOOTPROTO="none"
@@ -78,7 +72,6 @@ ip주소 입력 > 확인
 
 - C++ 14 컴파일러 사용하기<br>
 gcc/g++ 7.3 upgrade
-
 ```
 # curl https://ftp.gnu.org/gnu/gcc/gcc-7.3.0/gcc-7.3.0.tar.gz -O
 # tar xvfz gcc-7.3.0.tar.gz
@@ -133,7 +126,6 @@ VS 2017 설정
 2. CMake > 모두빌드하기
 3. 빌드된 경로복사해서 putty에서 연 후 make install
 4. install된 경로에서 파일 실행
-
 5. 디버깅시 시작항목선택에서 target 선택<br>
    접속이 안되면 CentOS 7 방화벽 포트 열기
 ```  
