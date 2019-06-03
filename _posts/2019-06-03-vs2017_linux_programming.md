@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Visual 2017 linux 프로그래밍'
+title: 'VS 2017 linux 프로그래밍 1'
 author: jack.jeong
 date: 2019-06-03 15:00
 tags: [linux,c++]
@@ -8,7 +8,7 @@ tags: [linux,c++]
 
 Visual 2017의 강력한 IDE 기능을 이용한 linux 프로그래밍하기
 
-가상OS 리눅스 CentOS7 이용
+가상OS 리눅스 CentOS 7
 -----------
 
 - Windows 10 pro Hyper-V 설치<br>
@@ -29,17 +29,14 @@ Hyper-V 설치 가능여부 확인
   permitRootLogin yes
 
 # systemctl start sshd.service
-
 ``` 
 
 2. 방화벽 설정
 
 ```
-
 # firewall-cmd --zone=public --add-port=22/tcp --permanent
 # firewall-cmd --reload
 # systemctl restart firewalld.service
-
 ``` 
 
 - Hyper-V CentOS 7 에 고정 ip 설정하기<br>
@@ -83,7 +80,6 @@ ip주소 입력 > 확인
 gcc/g++ 7.3 upgrade
 
 ```
-
 # curl https://ftp.gnu.org/gnu/gcc/gcc-7.3.0/gcc-7.3.0.tar.gz -O
 # tar xvfz gcc-7.3.0.tar.gz
 # yum install gmp-devel mpfr-devel libmpc-devel
@@ -118,7 +114,6 @@ int main()
 
 # g++ -o test.out test.cpp
 # ./test.out
-
 ```
 
 VS 2017 설정
@@ -131,7 +126,6 @@ VS 2017 설정
 이름: root
 암호: root 암호
 연결관리자 > 원격 헤더 intellisense 관리자 업데이트 클릭
-
 ```
 
 ** VS2017 cmake 빌드하기
@@ -140,10 +134,9 @@ VS 2017 설정
 3. 빌드된 경로복사해서 putty에서 연 후 make install
 4. install된 경로에서 파일 실행
 
-5. 디버깅시 시작항목선택에서 target 선택
+5. 디버깅시 시작항목선택에서 target 선택<br>
    접속이 안되면 CentOS 7 방화벽 포트 열기
 ```  
 # firewall-cmd --permanent --zone=public --add-port=10000/tcp
 # sudo firewall-cmd --reload
 ```
-   
