@@ -20,7 +20,7 @@ PHP, Perl, 또는 Python 프로그래밍 언어.<br><br>
 
 
 - Apache(아파치) 설치<br>
-yun 명령을 이용하여 Apcahe를 설치해줍니다. 2019년 6월 3일 현재 기준 최신 4.3.6 Stabled 버전이 설치됩니다.
+yu 명령을 이용하여 Apcahe를 설치해줍니다. 2019년 6월 3일 현재 기준 최신 4.3.6 Stabled 버전이 설치됩니다.
 
 ```
 $ yum install -y httpd
