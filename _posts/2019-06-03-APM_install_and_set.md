@@ -60,6 +60,7 @@ $ yum -y install epel-release yum-utils
 
 - Step 2: Disable repo for PHP 5.4<br>
 기본적으로 PHP 5.4 레포지토리가 활성화 되어있습니다. 이것을 7.3으로 바꿉니다.
+
 ```
 $ yum-config-manager --disable remi-php54
 $ yum-config-manager --enable remi-php73
