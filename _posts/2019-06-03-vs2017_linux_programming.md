@@ -1,15 +1,16 @@
 ---
 layout: post
-title: 'Jekyll를 이용한 GoLabs 기술 블로그 설치'
+title: 'Visual 2017의 강력한 IDE 기능을 이용한 linux 프로그래밍하기'
 author: jack.jeong
 date: 2019-06-03 15:00
 tags: [linux,c++]
 ---
 
-## Visual 2017의 강력한 IDE 기능을 이용한 linux 프로그래밍하기
+Visual 2017의 강력한 IDE 기능을 이용한 linux 프로그래밍하기
 
 가상OS 리눅스 CentOS7 이용
 -----------
+
 - Windows 10 pro Hyper-V 설치<br>
 제어판 > 프로그램 제거 > windows 기능 켜기/끄기 > Hyper-V 모두체크
 Hyper-V 설치 가능여부 확인
@@ -17,6 +18,7 @@ Hyper-V 설치 가능여부 확인
 - CentOS7 설치<br>
 1. Hyper-V 관리자에서 가상컴퓨터 새로 만들기 
 1세대 또는 2세대 만들기 후 보안 > 보안부팅사용체크해제
+
 ```
 # yum install openssh-server g++ gdb gdbserver zip unzip gcc gcc-c++
 # systemctl restart network
@@ -31,6 +33,7 @@ Hyper-V 설치 가능여부 확인
 ``` 
 
 2. 방화벽 설정
+
 ```
 
 # firewall-cmd --zone=public --add-port=22/tcp --permanent
@@ -45,13 +48,16 @@ Hyper-V 설치 가능여부 확인
 Hyper-V 관리자 > 가상스위치 관리자 > 새 가상 네트워크 스위치 > 내부
 2. Host OS의 제어판 > 네트워크 및 인터넷 > 네트워크 및 공유센터 > 1. 에서 만든 가상 스위치 선택 >
 인터넷 프로코콜 버전 4(TCP/IP V4) > 속성
+
 ```
 ip 주소 192.168.120.1
 서브넷마스크 255.255.255.0
 ```
+
 3. 네트워크 및 공유센터 > 이더넷 > 속성 > 공유 > 인터넷 연결공유 체크 및 1. 에서 만든 가상스위치 선택
 
 4. CentOS 7 설정
+
 ``` 
 # vi /etc/sysconfig/network-scripts/ifcfg-eth0
 BOOTPROTO="none"
@@ -66,7 +72,6 @@ NETWORKING_IPV6=no
 
 # vi /etc/resolv.conf
 nameserver 168.126.63.1
-
 ``` 
 
 ** Hyper-V 가상OS 포트 포워딩
