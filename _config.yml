@@ -27,6 +27,10 @@ plugins:
 paginate: 5
 paginate_path: '/page/:num/'
 
+# deployment
+host: 0.0.0.0
+port: 4000
+
 collections:
   authors:
     output: true
@@ -62,3 +66,4 @@ asset_url: /assets
 #  username: inswave
 github_url:
   username: golabs7
+
