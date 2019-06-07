@@ -3,7 +3,7 @@ layout: post
 title: 'VS 2017 linux 프로그래밍 1'
 author: jack.jeong
 date: 2019-06-03 15:00
-tags: [Linux,CentOS,c,c++]
+tags: [Linux,CentOS,C,C++]
 ---
 
 Visual Studio 2017 의 강력한 IDE 기능을 이용한 linux 프로그래밍하기 1
@@ -16,6 +16,7 @@ Visual Studio 2017 의 강력한 IDE 기능을 이용한 linux 프로그래밍�
 Hyper-V 설치 가능여부 확인
 
 - CentOS 7 설치<br>
+[Download CentOS](https://www.centos.org/download/)<br>
 Hyper-V 관리자에서 가상컴퓨터 새로 만들기<br>
 1세대 또는 2세대 만들기 후 보안 > 보안부팅사용체크해제
 
@@ -114,7 +115,7 @@ Visual Studio 2017 설정
 -----------
 
 - 원격 시스템 추가<br>
-
+[원격 Linux 컴퓨터에 연결](https://docs.microsoft.com/ko-kr/cpp/linux/connect-to-your-remote-linux-computer?view=vs-2019)<br>
 <pre><code>
 메뉴 > 도구 > 옵션 > 플랫폼간 연결 관리자 > 원격시스템 추가
 
@@ -126,11 +127,15 @@ Visual Studio 2017 설정
 </code></pre>
 
 > - VS 2017 cmake 빌드하기
+> [Visual Studio의 CMake 프로젝트](https://docs.microsoft.com/ko-kr/cpp/build/cmake-projects-in-visual-studio?view=vs-2019)
+> [Linux CMake 프로젝트 구성](https://docs.microsoft.com/ko-kr/cpp/linux/cmake-linux-project?view=vs-2019)
+> Linux 머신에서 반드시 CMake 3.8 이상 설치 [참고](https://golabs7.github.io/2019/06/07/vs2017_linux_programming2/)
 > 1. CMake > 생성
 > 2. CMake > 모두빌드하기
-> 3. 빌드된 경로 복사해서 putty에서 연 후<br>
+> 3. 빌드된 경로 복사해서 [HPuTTY](http://hputty.org/)에서 연 후<br>
 >    # make install
 > 4. install된 경로에서 파일 실행
+>    # ./test.out
 > 5. 디버깅시 시작항목 선택에서 target 선택<br>
 >   접속이 안되면 CentOS 7 방화벽 포트 열기
 > 
